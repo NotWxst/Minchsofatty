@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 45px 35px; 
+    width: 100%;
+    max-width: 420px; 
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.login-card h3 {
+    font-weight: 700;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 24px;
+}
+
+
+.form-group {
+    margin-bottom: 22px; 
+}
+
+.login-card label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #444;
+    font-size: 14px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 3px rgba(118, 75, 162, 0.15);
+    border-color: #764ba2;
+    background-color: #fff;
+    outline: none;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 13px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: opacity 0.3s ease, transform 0.1s ease;
+    margin-top: 10px;
+}
+
+.btn-login:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.btn-login:active {
+    transform: translateY(1px);
+}
+
+
+/* Khung bọc để định vị icon dựa theo chiều rộng của ô input */
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+/* Đảm bảo ô input password chừa khoảng trống bên phải để chữ không đè lên mắt */
+.password-wrapper .form-control {
+    padding-right: 40px; 
+    box-sizing: border-box; /* Giữ ô input không bị vỡ khung */
+}
+
+/* Định vị nút bấm chui vào trong ô input */
+.Togglebtn {
+    position: absolute;
+    right: 12px;               /* Cách lề phải ô nhập 12px */
+    top: 50%;
+    transform: translateY(-50%); /* Căn giữa nút bấm theo chiều dọc */
+    background: none;          /* Xóa bỏ nền xám hiện tại của bạn */
+    border: none;              /* Xóa bỏ viền mặc định */
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Định dạng hình ảnh icon mắt */
+.eye-icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url('show.png'); /* Thay bằng tên file ảnh mắt mở của bạn */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Trạng thái ảnh khi ẩn mật khẩu (khi kích hoạt class .hide trong JS) */
+.eye-icon.hide {
+    background-image: url('hide.png'); /* Thay bằng tên file ảnh mắt đóng của bạn */
+}
+
+.form-group h4 {
+    margin-top: 15px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: #666; 
+    text-align: center;
+}
+
+/* Định dạng cho đường dẫn Log in */
+.form-group h4 a {
+    color: #4f46e5; 
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+.Togglebtn:hover {
+    opacity: 0.7;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login card</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-card">
+        <h3 class="title">Log in</h3>
+
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" class="form-control" placeholder="Enter Email">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <!-- THÊM KHUNG BỌC Ở ĐÂY -->
+                <div class="password-wrapper">
+                    <input type="password" id="password" class="form-control" placeholder="Enter Password">
+                    <!-- THÊM type="button" ĐỂ TRÁNH BỊ SUBMIT FORM -->
+                    <button type="button" class="Togglebtn" onclick="togglePassword()">
+                        <span class="eye-icon"></span>
+                    </button>
+                </div>
+                <h4>You don't have Account yet?<a href="signup.html">Create a Account</a></h4>
+            </div>
+            
+            <button type="submit" class="btn-login" onclick="CheckLogin()">Login</button>
+        </form>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

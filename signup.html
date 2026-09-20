@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up card</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="signup-card">
+        <h3>Sign up</h3>
+
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" class="form-control" placeholder="Enter Email">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <!-- Khung bọc chứa input password và nút mắt -->
+                <div class="password-wrapper">
+                    <input type="password" id="password" class="form-control" placeholder="Enter Password">
+                    <button type="button" class="Togglebtn" onclick="togglePassword()">
+                        <span class="eye-icon"></span>
+                    </button>
+                </div>
+                <!-- Đưa thẻ chuyển trang ra ngoài .password-wrapper để CSS h4 hoạt động chuẩn xác -->
+                <h4>You have account. Go <a href="login.html">Log in</a></h4>
+            </div>
+            
+            <button type="submit" class="btn-signup" onclick="SignupAccount()">Sign un</button>
+        </form>
+    </div>
+
+    <script src="signup.js"></script>
+</body>
+</html>
